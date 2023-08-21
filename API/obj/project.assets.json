@@ -5979,11 +5979,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5992,14 +5992,15 @@
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj": {
-              "projectPath": "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj"
+            "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj"
             }
           }
         }

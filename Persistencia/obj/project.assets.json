@@ -5253,11 +5253,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
       "projectName": "Persistencia",
-      "projectPath": "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5272,8 +5272,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
-              "projectPath": "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
+            "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
             }
           }
         }

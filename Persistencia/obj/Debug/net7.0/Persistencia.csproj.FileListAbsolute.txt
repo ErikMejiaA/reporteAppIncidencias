@@ -1,0 +1,15 @@
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.deps.json
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.dll
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.pdb
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Dominio.dll
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Dominio.pdb
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CopyComplete
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.dll
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\refint\Persistencia.dll
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.pdb
+C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\ref\Persistencia.dll

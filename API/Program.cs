@@ -9,9 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 //habilitamos la conexion a la base de datos 
-builder.Services.AddDbContext<ReporteAppIncidenciasContext>(OptionsBuilder => 
+builder.Services.AddDbContext<ReporteAppIncidenciasContext>(OptionsBuilder =>
 {
-    string ? ConnectionString = builder.Configuration.GetConnectionString("ConexMysql");
+    string? ConnectionString = builder.Configuration.GetConnectionString("ConexMysql");
     OptionsBuilder.UseMySql(ConnectionString, ServerVersion.AutoDetect(ConnectionString));
 
 });

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SOXzJgBwR7QrnirKHumuYDsSbuFXQwIdKA9dIZB0z3Vc123ewVbPEoqF3f5CqPWOptdZbKNIvzpo4Xb9PVx9FA==",
+  "dgSpecHash": "4e/k/j6PjmHeLfknTHue1J1ail8Zi5UF3WAeMtp0l1M6Jbnmnv86bBf0O5GyjNKcZmQdCY8xGOPV1kMKg1ck7w==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
