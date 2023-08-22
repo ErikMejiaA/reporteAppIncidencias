@@ -9,6 +9,7 @@
       "Aplicacion/1.0.0": {
         "dependencies": {
           "Dominio": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.10",
           "Persistencia": "1.0.0"
         },
         "runtime": {

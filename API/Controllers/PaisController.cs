@@ -1,3 +1,5 @@
+using API.Dtos;
+using AutoMapper;
 using Dominio.Entities;
 using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -6,10 +8,12 @@ namespace API.Controllers;
 public class PaisController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
+    private readonly IMapper mapper;
 
-    public PaisController(IUnitOfWorkInterface UnitOfWork)
+    public PaisController(IUnitOfWorkInterface UnitOfWork, IMapper mapper)
     {
         _UnitOfWork = UnitOfWork;
+        this.mapper = mapper;
     }
 
     //METODO GET (obtener datos de la Db)
@@ -18,9 +22,17 @@ public class PaisController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<IEnumerable<Pais>>> Get()
+    public async Task<ActionResult<List<PaisDto>>> Get()
     {
         var paises = await _UnitOfWork.Paises.GetAllAsync();
-        return Ok(paises);
+        return this.mapper.Map<List<PaisDto>>(paises);
     }
+
+    [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+
+
 }

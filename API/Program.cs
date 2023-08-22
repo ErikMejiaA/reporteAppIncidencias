@@ -1,6 +1,6 @@
+using System.Reflection;
 using API.Extensions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Persistencia;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.ConfigureCors();//configuracion de las cors
 builder.Services.AddApplicationServices(); //configuracion de la UnitOfWork(repo-interface)
+builder.Services.AddAutoMapper(Assembly.GetEntryAssembly()); //habilitar el AutoMapper
 
 //habilitamos la conexion a la base de datos 
 builder.Services.AddDbContext<ReporteAppIncidenciasContext>(OptionsBuilder =>

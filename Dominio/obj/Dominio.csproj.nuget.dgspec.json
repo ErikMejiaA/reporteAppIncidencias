@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {}
+    "/home/apolM01-062/Desktop/reporteAppIncidencias/Dominio/Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
+    "/home/apolM01-062/Desktop/reporteAppIncidencias/Dominio/Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "/home/apolM01-062/Desktop/reporteAppIncidencias/Dominio/Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\obj\\",
+        "projectPath": "/home/apolM01-062/Desktop/reporteAppIncidencias/Dominio/Dominio.csproj",
+        "packagesPath": "/home/apolM01-062/.nuget/packages/",
+        "outputPath": "/home/apolM01-062/Desktop/reporteAppIncidencias/Dominio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/apolM01-062/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
         }
       }
     }
