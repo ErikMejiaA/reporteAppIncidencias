@@ -9,7 +9,7 @@ public interface IEquipoPcRecursoHwSwPcInterface
     IEnumerable<EquipoPcRecursoHwSwPc> Find(Expression<Func<EquipoPcRecursoHwSwPc, bool>> expression);
     Task<(int totalRegistros, IEnumerable<EquipoPcRecursoHwSwPc> registros)> GetAllAsync(int pageIndex, int pageSize, string search);
     void Add(EquipoPcRecursoHwSwPc entity);
-    void AddRnage(IEnumerable<EquipoPcRecursoHwSwPc> entities);
+    void AddRange(IEnumerable<EquipoPcRecursoHwSwPc> entities);
     void Remove(EquipoPcRecursoHwSwPc entity);
     void RemoveRange(IEnumerable<EquipoPcRecursoHwSwPc> entities);
     void Update(EquipoPcRecursoHwSwPc entity);       

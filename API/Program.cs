@@ -1,3 +1,4 @@
+using API.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Persistencia;
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.ConfigureCors();//configuracion de las cors
+builder.Services.AddApplicationServices(); //configuracion de la UnitOfWork(repo-interface)
 
 //habilitamos la conexion a la base de datos 
 builder.Services.AddDbContext<ReporteAppIncidenciasContext>(OptionsBuilder =>
@@ -45,6 +48,8 @@ using (var scope = app.Services.CreateScope())
         logger.LogError(ex, "Ocurrió un error durante la migración");
     }
 } 
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 

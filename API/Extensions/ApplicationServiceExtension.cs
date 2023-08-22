@@ -1,3 +1,6 @@
+using Aplicacion.UnitOfWork;
+using Dominio.Interfaces;
+
 namespace API.Extensions;
 public static class ApplicationServiceExtension
 {
@@ -13,4 +16,9 @@ public static class ApplicationServiceExtension
         }
     );
 
+    //se define la Unidad de trabajo (interfaz y repository)
+    public static void AddApplicationServices( this IServiceCollection services)
+    {
+        services.AddScoped<IUnitOfWorkInterface, UnitOfWork>();
+    }
 }
