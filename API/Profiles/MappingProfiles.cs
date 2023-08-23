@@ -22,6 +22,7 @@ public class MappingProfiles : Profile
         CreateMap<Genero, GeneroDto>().ReverseMap();
         CreateMap<Incidencia, IncidenciaDto>().ReverseMap();
         CreateMap<Pais, PaisDto>().ReverseMap();
+        CreateMap<Pais, PaisPorDepDto>().ReverseMap();
         CreateMap<Persona, PersonaDto>().ReverseMap();
         CreateMap<PersonaEmail, PersonaEmailDto>().ReverseMap();
         CreateMap<PersonaTelefonoMovil, PersonaTelefonoMovilDto>().ReverseMap();

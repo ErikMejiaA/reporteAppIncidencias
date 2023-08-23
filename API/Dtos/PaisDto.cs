@@ -5,7 +5,6 @@ public class PaisDto
     public string ? Nombre_pais { get; set; }
 
     //List<>
-    
     //public List<DepartamentoDto> ? Departamentos { get; set; }
         
 }

@@ -21,5 +21,29 @@ public class PaisRepository : GenericRepositoryA<Pais>, IPaisInterface
         .Include(p => p.Departamentos)
         .ToListAsync();
     }
+
+    public override async Task<Pais> GetByIdAsync(int id)
+    {
+        return await _context.Set<Pais>()
+        .Include(p => p.Departamentos)
+        .FirstOrDefaultAsync(p => p.Id_codigo == id);
+    }
     
+    public override async Task<(int totalRegistros, IEnumerable<Pais> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    {
+        var query = _context.Paises as IQueryable<Pais>;
+
+        if (!string.IsNullOrEmpty(search))
+        {
+            query = query.Where(p => p.Nombre_pais.ToLower().Contains(search));
+        }
+        var totalRegistros = await query.CountAsync();
+        var registros = await query
+                                .Include(p => p.Departamentos)
+                                .Skip((pageIndex - 1) * pageSize)
+                                .Take(pageSize)
+                                .ToListAsync();
+
+        return (totalRegistros, registros);
+    }
 }
