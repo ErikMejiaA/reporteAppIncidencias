@@ -1,5 +1,5 @@
 namespace API.Dtos;
-public class EstadoIncidenciaDTo
+public class EstadoIncidenciaDto
 {
     public int Id_codigo { get; set; }
     public string ? Estado { get; set; }

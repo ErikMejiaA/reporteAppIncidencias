@@ -150,6 +150,13 @@ C:/Users/Usuario/Desktop/reporteAppIncidencias/API/obj/Debug/net7.0/ref/API.dll
 /home/apolM01-062/Desktop/reporteAppIncidencias/API/obj/Debug/net7.0/API.pdb
 /home/apolM01-062/Desktop/reporteAppIncidencias/API/obj/Debug/net7.0/API.genruntimeconfig.cache
 /home/apolM01-062/Desktop/reporteAppIncidencias/API/obj/Debug/net7.0/ref/API.dll
+C:/Users/Usuario/Desktop/reporteAppIncidencias/API/bin/Debug/net7.0/AspNetCoreRateLimit.dll
+C:/Users/Usuario/Desktop/reporteAppIncidencias/API/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+/home/apolM01-062/Desktop/reporteAppIncidencias/API/bin/Debug/net7.0/AspNetCoreRateLimit.dll
+/home/apolM01-062/Desktop/reporteAppIncidencias/API/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\API.dll
+C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\refint\API.dll
+C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\API.pdb
 C:\Users\Usuario\Desktop\reporteAppIncidencias\API\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Usuario\Desktop\reporteAppIncidencias\API\bin\Debug\net7.0\appsettings.json
 C:\Users\Usuario\Desktop\reporteAppIncidencias\API\bin\Debug\net7.0\API.exe
@@ -223,8 +230,5 @@ C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\staticwebass
 C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
 C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\API.csproj.CopyComplete
-C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\API.dll
-C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\refint\API.dll
-C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\API.pdb
 C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\reporteAppIncidencias\API\obj\Debug\net7.0\ref\API.dll

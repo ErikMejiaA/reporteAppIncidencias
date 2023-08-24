@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers( options =>
 {
     options.RespectBrowserAcceptHeader = true;
-    options.ReturnHttpNotAcceptable = true; //evia error si no es soportado el formato que se quiere usar
+    options.ReturnHttpNotAcceptable = true; //envia error si no es soportado el formato que se quiere usar
 
 }).AddXmlSerializerFormatters();
 

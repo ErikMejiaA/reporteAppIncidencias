@@ -20,7 +20,7 @@ public class PaisController : BaseApiController
         this.mapper = mapper;
     }
 
-    //METODO GET (obtener solo los Paises de la Db)
+    //METODO GET (obtener todos los registros de Paises de la Db)
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
