@@ -34,13 +34,32 @@ public class PersonaEmailRepository : IPersonaEmailInterface
         return await _context.Set<PersonaEmail>().ToListAsync();
     }
 
-    public async Task<(int totalRegistros, IEnumerable<PersonaEmail> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    /*public async Task<(int totalRegistros, IEnumerable<PersonaEmail> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
     {
         var totalRegistros = await _context.Set<PersonaEmail>().CountAsync();
         var registros = await _context.Set<PersonaEmail>()
             .Skip((pageIndex - 1) * pageSize)
             .Take(pageIndex)
             .ToListAsync();
+
+        return (totalRegistros, registros);
+    }*/
+    public async Task<(int totalRegistros, IEnumerable<PersonaEmail> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    {
+
+        var query = _context.PersonaEmails as IQueryable<PersonaEmail>;
+
+        if (!string.IsNullOrEmpty(search))
+        {
+            query = query.Where(p => p.Id_personaFK.ToLower().Contains(search));
+        }
+
+        var totalRegistros = await query.CountAsync();
+
+        var registros = await query
+                                .Skip((pageIndex - 1) * pageSize)
+                                .Take(pageIndex)
+                                .ToListAsync();
 
         return (totalRegistros, registros);
     }

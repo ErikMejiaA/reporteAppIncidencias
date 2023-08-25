@@ -36,14 +36,33 @@ public class EquipoPcRecursoHwSwPcRepository : IEquipoPcRecursoHwSwPcInterface
 
     public async Task<(int totalRegistros, IEnumerable<EquipoPcRecursoHwSwPc> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
     {
-        var totalRegistros = await _context.Set<EquipoPcRecursoHwSwPc>().CountAsync();
-        var registros = await _context.Set<EquipoPcRecursoHwSwPc>()
-            .Skip((pageIndex - 1) * pageSize)
-            .Take(pageIndex)
-            .ToListAsync();
+        var query = _context.EquipoPcRecursoHwSwPcs as IQueryable<EquipoPcRecursoHwSwPc>;
+
+        if (!string.IsNullOrEmpty(search))
+        {
+            query = query.Where(p => p.Id_equipoFK.ToLower().Contains(search));
+        }
+
+        var totalRegistros = await query.CountAsync();
+
+        var registros = await query
+                            .Skip((pageIndex - 1) * pageSize)
+                            .Take(pageIndex)
+                            .ToListAsync();
             
         return (totalRegistros, registros);
     }
+    
+    /*public virtual async Task<(int totalRegistros, IEnumerable<EquipoPcRecursoHwSwPc> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    {
+        var totalRegistros = await _context.Set<EquipoPcRecursoHwSwPc>().CountAsync();
+        var registros = await _context.Set<EquipoPcRecursoHwSwPc>()
+        .Skip((pageIndex - 1) * pageSize)
+        .Take(pageSize)
+        .ToListAsync();
+
+        return (totalRegistros, registros);
+    }*/
 
     public async Task<EquipoPcRecursoHwSwPc> GetByIdAsync(string idEquiPc, int idRecurso)
     {
@@ -64,4 +83,5 @@ public class EquipoPcRecursoHwSwPcRepository : IEquipoPcRecursoHwSwPcInterface
     {
         _context.Set<EquipoPcRecursoHwSwPc>().Update(entity);
     }
+    
 }

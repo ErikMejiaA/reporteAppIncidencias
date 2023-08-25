@@ -34,13 +34,31 @@ public class PersonaTelefonoMovilRepository : IPersonaTelefonoMovilInterface
         return await _context.Set<PersonaTelefonoMovil>().ToListAsync();
     }
 
-    public async Task<(int totalRegistros, IEnumerable<PersonaTelefonoMovil> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    /*public async Task<(int totalRegistros, IEnumerable<PersonaTelefonoMovil> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
     {
         var totalRegistros = await _context.Set<PersonaTelefonoMovil>().CountAsync();
         var registros = await _context.Set<PersonaTelefonoMovil>()
             .Skip((pageIndex - 1) * pageSize)
             .Take(pageIndex)
             .ToListAsync();
+
+        return (totalRegistros, registros);
+    }*/
+    public async Task<(int totalRegistros, IEnumerable<PersonaTelefonoMovil> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    {
+        var query = _context.PersonaTelefonoMoviles as IQueryable<PersonaTelefonoMovil>;
+
+        if (!string.IsNullOrEmpty(search))
+        {
+            query = query.Where(p => p.Id_personaFK.ToLower().Contains(search));
+        }
+
+        var totalRegistros = await query.CountAsync();
+
+        var registros = await query
+                                .Skip((pageIndex - 1) * pageSize)
+                                .Take(pageIndex)
+                                .ToListAsync();
 
         return (totalRegistros, registros);
     }
