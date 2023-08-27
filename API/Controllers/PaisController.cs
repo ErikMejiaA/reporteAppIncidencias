@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers;
 [ApiVersion("1.0")] //trae solo los paises
 [ApiVersion("1.1")] //trae paises con sus Dep
-[ApiVersion("1.2")] //obtiene paginacion y registros y busquedas 
+[ApiVersion("1.2")] //obtiene paginacion y registros y busquedas de un Pais
 public class PaisController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;

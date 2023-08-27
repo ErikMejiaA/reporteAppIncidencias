@@ -1,5 +1,5 @@
 namespace API.Dtos;
-public class RecursoHwSwXEquipoPCdTO
+public class RecursoHwSwXEquipoPcDto
 {
     public int Id_codigo { get; set; }
     public string ? Nombre_recursoHwSwPc { get; set; }

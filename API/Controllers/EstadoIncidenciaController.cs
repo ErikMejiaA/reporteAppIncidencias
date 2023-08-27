@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener los Estados de la Incidencias
+[ApiVersion("1.1")] //obtener las de incidencias en un estado
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de un estado
 public class EstadoIncidenciaController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
@@ -21,7 +21,7 @@ public class EstadoIncidenciaController : BaseApiController
     }
 
     //peticiones
-    //METODO GET (obtener todos los registros)
+    //METODO GET (obtener todos los registros de un estado)
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]

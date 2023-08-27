@@ -6,8 +6,8 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
+[ApiVersion("1.0")] //obtener los Equipos de Computo
+[ApiVersion("1.1")] //obtener las listas de los componentes del Pc
 [ApiVersion("1.2")] //obtener paginacion, registros y buscador
 public class EquipoPcRecursoHwSwPcController : BaseApiController
 {

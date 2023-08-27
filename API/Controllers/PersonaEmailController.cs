@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener la relacion entre persona y email
+[ApiVersion("1.1")] //obtener las listas de los email con las personas
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador del email
 public class PersonaEmailController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;

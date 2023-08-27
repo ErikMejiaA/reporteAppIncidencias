@@ -6,7 +6,7 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner las Arl 
+[ApiVersion("1.0")] //obtener las Arl 
 [ApiVersion("1.1")] //obtener Arl con sus usuarios
 [ApiVersion("1.2")] //obtener paginacion, registros y buscador en Arl
 public class ArlController : BaseApiController

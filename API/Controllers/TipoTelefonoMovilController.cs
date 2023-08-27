@@ -6,6 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
+[ApiVersion("1.0")] //obtener los tipos de telefonos moviles
+[ApiVersion("1.1")] //obtener las personas con su tipo de telefonos
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de tipos de telefono
 public class TipoTelefonoMovilController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;

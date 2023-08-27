@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtner los Equipos
+[ApiVersion("1.1")] //obtener las listas de puestos que contiene equipo
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de Equipos
 public class EquipoPcController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
@@ -33,7 +33,7 @@ public class EquipoPcController : BaseApiController
         return this.mapper.Map<List<EquipoPcDto>>(equiposPc);
     }
 
-    //METODO GET (obtener todas las list)
+    //METODO GET (obtener todas las list que pertenecen a un equipo)
     [HttpGet]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]

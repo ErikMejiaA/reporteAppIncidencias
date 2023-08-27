@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener los Geneneros
+[ApiVersion("1.1")] //obtener las personas que esntan dentro del un genero
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de Gnenero
 public class GeneroController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;

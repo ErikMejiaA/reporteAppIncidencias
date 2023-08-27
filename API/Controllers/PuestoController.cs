@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener los puesto que hay dentro del salon
+[ApiVersion("1.1")] //obtener las listas de incidencias presentes en el puesto
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de un puesto
 public class PuestoController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
@@ -33,7 +33,7 @@ public class PuestoController : BaseApiController
         return this.mapper.Map<List<PuestoDto>>(puestos);
     }
 
-    //METODO GET (obtener todas las list)
+    //METODO GET (obtener todas las incidencias de los puestos)
     [HttpGet]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -113,6 +113,7 @@ public class PuestoController : BaseApiController
         puesto.Id_codigo = id;
         _UnitOfWork.Puestos.Update(puesto);
         await _UnitOfWork.SaveAsync();
+        
         return this.mapper.Map<PuestoDto>(puesto);        
     }
 

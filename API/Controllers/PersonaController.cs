@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener las personas
+[ApiVersion("1.1")] //obtener loda la inf de las personas
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de una persona
 public class PersonaController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
@@ -21,7 +21,7 @@ public class PersonaController : BaseApiController
     }
 
     //peticiones 
-    //METODO GET (obtener todos los registros)
+    //METODO GET (obtener todos los registros de las personas)
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -33,7 +33,7 @@ public class PersonaController : BaseApiController
         return this.mapper.Map<List<PersonaDto>>(personas);
     }
 
-    //METODO GET (obtener todas las list)
+    //METODO GET (obtener todas la inf de las persona)
     [HttpGet]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -56,6 +56,7 @@ public class PersonaController : BaseApiController
     public async Task<ActionResult<Pager<PersonaListTodoDto>>> Get1B([FromQuery] Params personaParams)
     {
         var personas = await _UnitOfWork.Personas.GetAllAsync(personaParams.PageIndex, personaParams.PageSize, personaParams.Search);
+        
         var lstPersonaDto = this.mapper.Map<List<PersonaListTodoDto>>(personas.registros);
 
         return new Pager<PersonaListTodoDto>(lstPersonaDto, personas.totalRegistros, personaParams.PageIndex, personaParams.PageSize, personaParams.Search);

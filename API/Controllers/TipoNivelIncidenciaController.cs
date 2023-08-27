@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener los niveles de incidencia
+[ApiVersion("1.1")] //obtener las incidencias deacuerdo a su nivel de incidencia
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador por nievl de incidencia 
 public class TipoNivelIncidenciaController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;

@@ -6,7 +6,7 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner solo las areas de incidencias 
+[ApiVersion("1.0")] //obtener solo las areas de incidencias
 [ApiVersion("1.1")] //obtener las incidencias y los salones del area
 [ApiVersion("1.2")] //obtener paginacion, registros y buscador
 public class AreaIncidenciaController : BaseApiController

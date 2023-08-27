@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtner los tipos de cargos de la persona
+[ApiVersion("1.1")] //obtener las personas por el tipo de cargo 
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador por tipo de persona o cargo
 public class TipoPersonaController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;

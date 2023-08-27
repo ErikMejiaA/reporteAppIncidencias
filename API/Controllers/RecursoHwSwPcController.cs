@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener los componentes de Hw, Sw del Equipo Pc
+[ApiVersion("1.1")] //obtener las lista de equipos que contiene componentes 
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de componebtes o resucrsos del equipo Pc
 public class RecursoHwSwPcController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
@@ -40,10 +40,10 @@ public class RecursoHwSwPcController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<List<RecursoHwSwXEquipoPCdTO>>> Get1A()
+    public async Task<ActionResult<List<RecursoHwSwXEquipoPcDto>>> Get1A()
     {
         var recursos = await _UnitOfWork.RecursoHwSwPcs.GetAllAsync();
-        return this.mapper.Map<List<RecursoHwSwXEquipoPCdTO>>(recursos);
+        return this.mapper.Map<List<RecursoHwSwXEquipoPcDto>>(recursos);
     }
 
     //METODO GET (Para obtener paginacion, registro y busqueda en la entidad)
@@ -53,12 +53,12 @@ public class RecursoHwSwPcController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<Pager<RecursoHwSwXEquipoPCdTO>>> Get1B([FromQuery] Params recursoParams)
+    public async Task<ActionResult<Pager<RecursoHwSwXEquipoPcDto>>> Get1B([FromQuery] Params recursoParams)
     {
         var recursos = await _UnitOfWork.RecursoHwSwPcs.GetAllAsync(recursoParams.PageIndex, recursoParams.PageSize, recursoParams.Search);
-        var lstrecursosDto = this.mapper.Map<List<RecursoHwSwXEquipoPCdTO>>(recursos.registros);
+        var lstrecursosDto = this.mapper.Map<List<RecursoHwSwXEquipoPcDto>>(recursos.registros);
 
-        return new Pager<RecursoHwSwXEquipoPCdTO>(lstrecursosDto, recursos.totalRegistros, recursoParams.PageIndex, recursoParams.PageSize, recursoParams.Search);
+        return new Pager<RecursoHwSwXEquipoPcDto>(lstrecursosDto, recursos.totalRegistros, recursoParams.PageIndex, recursoParams.PageSize, recursoParams.Search);
     }
 
     //METODO GET POR ID (Traer un solo registro de la entidad de la  Db)
@@ -67,7 +67,7 @@ public class RecursoHwSwPcController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<RecursoHwSwXEquipoPCdTO>> Get( int id)
+    public async Task<ActionResult<RecursoHwSwXEquipoPcDto>> Get( int id)
     {
         var recursos = await _UnitOfWork.RecursoHwSwPcs.GetByIdAsync(id);
 
@@ -75,7 +75,7 @@ public class RecursoHwSwPcController : BaseApiController
             return NotFound();
         }
 
-        return this.mapper.Map<RecursoHwSwXEquipoPCdTO>(recursos);
+        return this.mapper.Map<RecursoHwSwXEquipoPcDto>(recursos);
     }
 
     //METODO POST (para enviar registros a la entidad de la Db)

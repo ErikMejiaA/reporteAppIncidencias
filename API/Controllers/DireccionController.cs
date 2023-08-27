@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener las partes de la direccion
+[ApiVersion("1.1")] //obtener las listas de personas segun la direccion
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de la direccion
 public class DireccionController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
@@ -21,7 +21,7 @@ public class DireccionController : BaseApiController
     }
 
     //peticiones 
-    //METODO GET (obtener todos los registros)
+    //METODO GET (obtener todos los registros de la direccion)
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -29,7 +29,7 @@ public class DireccionController : BaseApiController
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<List<DireccionDto>>> Get()
     {
-        var direcciones = await _UnitOfWork.Departamentos.GetAllAsync();
+        var direcciones = await _UnitOfWork.Direcciones.GetAllAsync();
         return this.mapper.Map<List<DireccionDto>>(direcciones);
     }
 

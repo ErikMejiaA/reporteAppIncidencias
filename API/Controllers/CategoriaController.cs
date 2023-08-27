@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 [ApiVersion("1.0")] //obtner las categorias
-[ApiVersion("1.1")] //obtener categorias con incidencias y Recusos
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador 
+[ApiVersion("1.1")] //obtener categorias con incidencias y Recursos
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de categoria
 public class CategoriaController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
@@ -21,7 +21,7 @@ public class CategoriaController : BaseApiController
     }
     //peticiones 
 
-    //METODO GET (obtener todos los registros)
+    //METODO GET (obtener todos los registros de categoria)
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]

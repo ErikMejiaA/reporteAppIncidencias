@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener las incidencias 
+[ApiVersion("1.1")] //obtener los estados de una incidencia
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de una incidencia
 public class IncidenciaController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;

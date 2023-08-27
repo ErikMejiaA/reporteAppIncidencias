@@ -55,7 +55,7 @@ public class MappingProfiles : Profile
         CreateMap<Puesto, PuestoPorIncidenciaDto>().ReverseMap();
 
         CreateMap<RecursoHwSwPc, RecursoHwSwPcDto>().ReverseMap();
-        CreateMap<RecursoHwSwPc, RecursoHwSwXEquipoPCdTO>().ReverseMap();
+        CreateMap<RecursoHwSwPc, RecursoHwSwXEquipoPcDto>().ReverseMap();
 
         CreateMap<Salon, SalonDto>().ReverseMap();
         CreateMap<Salon, SalonXInciXPuestoDto>().ReverseMap();

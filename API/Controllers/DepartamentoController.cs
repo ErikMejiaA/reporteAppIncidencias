@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener los departamento
+[ApiVersion("1.1")] //obtener las ciudades de cada departamento
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de un departamento
 public class DepartamentoController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
@@ -21,7 +21,7 @@ public class DepartamentoController : BaseApiController
     }
 
     //peticiones 
-    //METODO GET (obtener todos los registros)
+    //METODO GET (obtener todos los registros de los Dep)
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -33,7 +33,7 @@ public class DepartamentoController : BaseApiController
         return this.mapper.Map<List<DepartamentoDto>>(departamentos);
     }
 
-    //METODO GET (obtener todas las list)
+    //METODO GET (obtener todas las ciudades de los Dep)
     [HttpGet]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -55,7 +55,7 @@ public class DepartamentoController : BaseApiController
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<Pager<DepartamentoCiudadDto>>> Get1B([FromQuery] Params departParams)
     {
-        var departaCiud = await _UnitOfWork.Ciudades.GetAllAsync(departParams.PageIndex, departParams.PageSize, departParams.Search);
+        var departaCiud = await _UnitOfWork.Departamentos.GetAllAsync(departParams.PageIndex, departParams.PageSize, departParams.Search);
         var lstDepCiudad = this.mapper.Map<List<DepartamentoCiudadDto>>(departaCiud.registros);
 
         return new Pager<DepartamentoCiudadDto>(lstDepCiudad, departaCiud.totalRegistros, departParams.PageIndex, departParams.PageSize, departParams.Search);

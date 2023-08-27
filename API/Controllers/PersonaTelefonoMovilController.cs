@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
+[ApiVersion("1.0")] //obtener los personas con sus telefononos
 [ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de la persona con su telefono
 public class PersonaTelefonoMovilController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;

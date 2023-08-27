@@ -6,9 +6,9 @@ using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtner los departamento
-[ApiVersion("1.1")] //obtener las listas
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador
+[ApiVersion("1.0")] //obtener las Eps
+[ApiVersion("1.1")] //obtener las lista de personas que pertenecen a una eps
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de la eps
 public class EpsController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
@@ -33,7 +33,7 @@ public class EpsController : BaseApiController
         return this.mapper.Map<List<EpsDto>>(eps);
     }
 
-    //METODO GET (obtener todas las list)
+    //METODO GET (obtener todas las personas de una eps)
     [HttpGet]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
