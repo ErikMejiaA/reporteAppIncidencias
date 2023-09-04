@@ -32,9 +32,11 @@ public class UnitOfWork : IUnitOfWorkInterface, IDisposable
     private SalonRepository ? _salones;
     private TipoEmailRepository ? _tipoEmails;
     private TipoNivelIncidenciaRepository ? _tipoNivelIncidencias;
-    private TipoPersonaRepository ? _tipoPersonas;
+    private RolRepository ? _roles;
     private TipoSangreRepository ? _tiposSangre;
     private TipoTelefonoMovilRepository ? _tipoTelefonoMoviles;
+    private UsuarioRepository ? _usuarios;
+    private UsuariosRolesRepository ? _usuariosRoles;
 
     public UnitOfWork(ReporteAppIncidenciasContext context)
     {
@@ -275,14 +277,14 @@ public class UnitOfWork : IUnitOfWorkInterface, IDisposable
         }
     }
 
-    public ITipoPersonaInterface TipoPersonas
+    public IRolInterface Roles
     {
         get
         {
-            if (_tipoPersonas == null) {
-                _tipoPersonas = new TipoPersonaRepository(_context);
+            if (_roles == null) {
+                _roles = new RolRepository(_context);
             }
-            return _tipoPersonas;
+            return _roles;
         }
     }
 
@@ -307,6 +309,29 @@ public class UnitOfWork : IUnitOfWorkInterface, IDisposable
             return _tipoTelefonoMoviles;
         }
     }
+
+    public IUsuarioInterface Usuarios
+    {
+        get
+        {
+            if (_usuarios == null) {
+                _usuarios = new UsuarioRepository(_context);
+            }
+            return _usuarios;
+        }
+    }
+
+    public IUsuariosRolesInterface UsuariosRoles
+    {
+        get
+        {
+            if (_usuariosRoles == null) {
+                _usuariosRoles = new UsuariosRolesRepository(_context);
+            }
+            return _usuariosRoles;
+        }
+    }
+
 
     public void Dispose()
     {

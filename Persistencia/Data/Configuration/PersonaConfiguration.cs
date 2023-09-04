@@ -54,10 +54,10 @@ public class PersonaConfiguration : IEntityTypeConfiguration<Persona>
         .HasForeignKey(p => p.Id_tipoSangreFK)
         .IsRequired();
 
-        builder.HasOne(p => p.TipoPersona)
+        /*builder.HasOne(p => p.TipoPersona)
         .WithMany(p => p.Personas)
         .HasForeignKey(p => p.Id_tipoPersonaFK)
-        .IsRequired();
+        .IsRequired();*/
 
         builder.HasOne(p => p.Eps)
         .WithMany(p => p.Personas)

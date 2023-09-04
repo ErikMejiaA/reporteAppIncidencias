@@ -16,7 +16,8 @@ builder.Services.AddControllers( options =>
 }).AddXmlSerializerFormatters();
 
 builder.Services.ConfigureCors();//configuracion de las cors
-builder.Services.AddApplicationServices(); //configuracion de la UnitOfWork(repo-interface)
+builder.Services.AddApplicationServices(); //configuracion de la UnitOfWork(repo-interface) y otras cosas mas
+builder.Services.AddJwt(builder.Configuration); //definir los parametros del JWT para añadir 
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly()); //habilitar el AutoMapper
 builder.Services.ConfigureRateLimiting();//habilitar la configuracion del numero de peticiones 
 builder.Services.ConfigureApiVersioning(); //habilitar las versiones o versionado en el proyecto para las Apis 
@@ -65,8 +66,14 @@ app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
+//server = 192.168.128.209; user = apolo; password = Apo1oC@mp3r;
+//server = localhost; user = root; password = 123456789;
+//dotnet add package Microsoft.EntityFrameworkCore --version 7.0.10
+//dotnet add package System.IdentityModel.Tokens.Jwt --version 6.32.2

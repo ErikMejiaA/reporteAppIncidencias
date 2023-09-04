@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {}
+    "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\obj\\",
+        "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\APM01-62\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APM01-62\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -67,21 +67,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {
+    "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
         "projectName": "Persistencia",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\obj\\",
+        "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
+        "packagesPath": "C:\\Users\\APM01-62\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APM01-62\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -93,8 +93,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
+              "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -138,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

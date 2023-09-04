@@ -5,7 +5,7 @@ public class PersonaTelefonoMovil
 
     //foranaes
     public string ? Id_personaFK { get; set; }
-    public int Id_tipoTelefonoMovilFK { get; set; }
+    public int ? Id_tipoTelefonoMovilFK { get; set; }
 
     //referencia
     public Persona ? Persona { get; set; }

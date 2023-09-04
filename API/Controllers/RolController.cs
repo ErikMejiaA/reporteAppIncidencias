@@ -9,12 +9,12 @@ namespace API.Controllers;
 [ApiVersion("1.0")] //obtner los tipos de cargos de la persona
 [ApiVersion("1.1")] //obtener las personas por el tipo de cargo 
 [ApiVersion("1.2")] //obtener paginacion, registros y buscador por tipo de persona o cargo
-public class TipoPersonaController : BaseApiController
+public class RolController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
     private readonly IMapper mapper;
 
-    public TipoPersonaController(IUnitOfWorkInterface UnitOfWork, IMapper mapper)
+    public RolController(IUnitOfWorkInterface UnitOfWork, IMapper mapper)
     {
         _UnitOfWork = UnitOfWork;
         this.mapper = mapper;
@@ -27,24 +27,24 @@ public class TipoPersonaController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<List<TipoPersonaDto>>> Get()
+    public async Task<ActionResult<List<RolDto>>> Get()
     {
-        var tipoPersonas = await _UnitOfWork.TipoPersonas.GetAllAsync();
-        return this.mapper.Map<List<TipoPersonaDto>>(tipoPersonas);
+        var roles = await _UnitOfWork.Roles.GetAllAsync();
+        return this.mapper.Map<List<RolDto>>(roles);
     }
 
     //METODO GET (obtener todas las list)
-    [HttpGet]
+    /*[HttpGet]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<List<TipoPersonaXpersonaDto>>> Get1A()
+    public async Task<ActionResult<List<RolDto>>> Get1A()
     {
-        var tipoPersonas = await _UnitOfWork.TipoPersonas.GetAllAsync();
-        return this.mapper.Map<List<TipoPersonaXpersonaDto>>(tipoPersonas);
-    }
+        var roles = await _UnitOfWork.Roles.GetAllAsync();
+        return this.mapper.Map<List<RolDto>>(roles);
+    }*/
 
     //METODO GET (Para obtener paginacion, registro y busqueda en la entidad)
     [HttpGet]
@@ -53,13 +53,13 @@ public class TipoPersonaController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<Pager<TipoPersonaXpersonaDto>>> Get1B([FromQuery] Params personaParams)
+    public async Task<ActionResult<Pager<RolDto>>> Get1B([FromQuery] Params rolParams)
     {
-        var tipoPersonas = await _UnitOfWork.TipoPersonas.GetAllAsync(personaParams.PageIndex, personaParams.PageSize, personaParams.Search);
+        var roles = await _UnitOfWork.Roles.GetAllAsync(rolParams.PageIndex, rolParams.PageSize, rolParams.Search);
 
-        var lstTipoPersonaDto = this.mapper.Map<List<TipoPersonaXpersonaDto>>(tipoPersonas.registros);
+        var lstTipoPersonaDto = this.mapper.Map<List<RolDto>>(roles.registros);
 
-        return new Pager<TipoPersonaXpersonaDto>(lstTipoPersonaDto, tipoPersonas.totalRegistros, personaParams.PageIndex, personaParams.PageSize, personaParams.Search);
+        return new Pager<RolDto>(lstTipoPersonaDto, roles.totalRegistros, rolParams.PageIndex, rolParams.PageSize, rolParams.Search);
     }
 
     //METODO GET POR ID (Traer un solo registro de la entidad de la  Db)
@@ -68,15 +68,15 @@ public class TipoPersonaController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<TipoPersonaXpersonaDto>> Get( int id)
+    public async Task<ActionResult<RolDto>> Get( int id)
     {
-        var tipoPersonas = await _UnitOfWork.TipoPersonas.GetByIdAsync(id);
+        var rol = await _UnitOfWork.Roles.GetByIdAsync(id);
 
-        if (tipoPersonas == null) {
+        if (rol == null) {
             return NotFound();
         }
 
-        return this.mapper.Map<TipoPersonaXpersonaDto>(tipoPersonas);
+        return this.mapper.Map<RolDto>(rol);
     }
 
     //METODO POST (para enviar registros a la entidad de la Db)
@@ -85,17 +85,17 @@ public class TipoPersonaController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<TipoPersonaDto>> Post(TipoPersonaDto tipoPersonaDto)
+    public async Task<ActionResult<RolDto>> Post(RolDto rolDto)
     {
-        var tipoPersona = this.mapper.Map<TipoPersona>(tipoPersonaDto);
-        _UnitOfWork.TipoPersonas.Add(tipoPersona);
+        var rol = this.mapper.Map<Rol>(rolDto);
+        _UnitOfWork.Roles.Add(rol);
         await _UnitOfWork.SaveAsync();
 
-        if (tipoPersona == null) {
+        if (rol == null) {
             return BadRequest();
         }
 
-        return this.mapper.Map<TipoPersonaDto>(tipoPersona);
+        return this.mapper.Map<RolDto>(rol);
     }
 
     //METODO PUT (editar un registro de la entidad de la Db)
@@ -104,18 +104,18 @@ public class TipoPersonaController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<TipoPersonaDto>> Put(int id, [FromBody] TipoPersonaDto tipoPersonaDto)
+    public async Task<ActionResult<RolDto>> Put(int id, [FromBody] RolDto rolDto)
     {
-        if (tipoPersonaDto == null) {
+        if (rolDto == null) {
             return NotFound();
         }
 
-        var tipoPersona = this.mapper.Map<TipoPersona>(tipoPersonaDto);
-        tipoPersona.Id_codigo = id;
-        _UnitOfWork.TipoPersonas.Update(tipoPersona);
+        var rol = this.mapper.Map<Rol>(rolDto);
+        rol.Id_codigo = id;
+        _UnitOfWork.Roles.Update(rol);
         await _UnitOfWork.SaveAsync();
 
-        return this.mapper.Map<TipoPersonaDto>(tipoPersona);        
+        return this.mapper.Map<RolDto>(rol);        
     }
 
     //METODO DELETE (Eliminar un registro de la entidad de la Db)
@@ -124,15 +124,15 @@ public class TipoPersonaController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<TipoPersonaDto>> Delete(int id)
+    public async Task<ActionResult<RolDto>> Delete(int id)
     {
-        var tipoPersona = await _UnitOfWork.TipoPersonas.GetByIdAsync(id);
+        var rol = await _UnitOfWork.Roles.GetByIdAsync(id);
         
-        if (tipoPersona == null) {
+        if (rol == null) {
             return NotFound();
         }
 
-        _UnitOfWork.TipoPersonas.Remove(tipoPersona);
+        _UnitOfWork.Roles.Remove(rol);
         await _UnitOfWork.SaveAsync();
 
         return NoContent();

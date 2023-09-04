@@ -1,34 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj": {}
+    "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj": {
+    "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\API\\obj\\",
+        "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\APM01-62\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APM01-62\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj"
+              "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj": {
+                "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj"
               }
             }
           }
@@ -76,6 +75,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.32.2, )"
             }
           },
           "imports": [
@@ -97,21 +100,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj": {
+    "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj",
+        "projectUniqueName": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj",
         "projectName": "Aplicacion",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\obj\\",
+        "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj",
+        "packagesPath": "C:\\Users\\APM01-62\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Aplicacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APM01-62\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -123,11 +126,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
+              "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj"
+              "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {
+                "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj"
               }
             }
           }
@@ -163,21 +166,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\obj\\",
+        "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\APM01-62\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APM01-62\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -230,21 +233,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {
+    "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
         "projectName": "Persistencia",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\obj\\",
+        "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
+        "packagesPath": "C:\\Users\\APM01-62\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APM01-62\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -256,8 +259,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
+              "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -301,7 +304,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

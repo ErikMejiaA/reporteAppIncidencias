@@ -33,9 +33,11 @@ public class ReporteAppIncidenciasContext : DbContext
     public DbSet<Salon> ? Salones { get; set; }
     public DbSet<TipoEmail> ? TipoEmails { get; set; }
     public DbSet<TipoNivelIncidencia> ? TipoNivelIncidencias { get; set; }
-    public DbSet<TipoPersona> ? TipoPersonas { get; set; }
+    public DbSet<Rol> ? Roles { get; set; }
     public DbSet<TipoSangre> ? TiposSangre { get; set; }
     public DbSet<TipoTelefonoMovil> ? TipoTelefonoMoviles { get; set; }
+    public DbSet<Usuario> ? Usuarios { get; set; }
+    public DbSet<UsuariosRoles> ? UsuariosRoles { get; set; }
 
     //cargar las configuraciones y conexion a la base de datos 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

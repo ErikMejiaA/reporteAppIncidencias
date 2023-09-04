@@ -5268,19 +5268,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\APM01-62\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj",
+      "projectUniqueName": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj",
       "projectName": "Aplicacion",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Aplicacion\\obj\\",
+      "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Aplicacion\\Aplicacion.csproj",
+      "packagesPath": "C:\\Users\\APM01-62\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Aplicacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\APM01-62\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5292,11 +5292,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
+            "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
             },
-            "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj"
+            "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj": {
+              "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj"
             }
           }
         }
@@ -5332,7 +5332,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

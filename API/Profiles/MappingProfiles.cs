@@ -66,8 +66,8 @@ public class MappingProfiles : Profile
         CreateMap<TipoNivelIncidencia, TipoNivelIncidenciaDto>().ReverseMap();
         CreateMap<TipoNivelIncidencia, TipoNivelIncidenXIncidenciaDto>().ReverseMap();
 
-        CreateMap<TipoPersona, TipoPersonaDto>().ReverseMap();
-        CreateMap<TipoPersona, TipoPersonaXpersonaDto>().ReverseMap();
+        CreateMap<Rol, RolDto>().ReverseMap();
+        CreateMap<Rol, RolXusuarioXUusuariosRolesDto>().ReverseMap();
 
         CreateMap<TipoSangre, TipoSangreDto>().ReverseMap();
         CreateMap<TipoSangre, TipoSangreXpersonaDto>().ReverseMap();

@@ -12,9 +12,9 @@ public class Persona : BaseEntityB
     public int Id_ciudadFK { get; set; }
     public int Id_generoFK { get; set; }
     public int Id_tipoSangreFK { get; set; }
-    public int Id_tipoPersonaFK { get; set; }
+    //public int Id_tipoPersonaFK { get; set; }
     public int Id_epsFK { get; set; }
-    public int Id_arlFK { get; set; }
+    public int ? Id_arlFK { get; set; }
 
     //ICollection<>
     public ICollection<Incidencia> ? Incidencias { get; set; }
@@ -26,7 +26,7 @@ public class Persona : BaseEntityB
     public Ciudad ? Ciudad { get; set; }
     public Genero ? Genero { get; set; }
     public TipoSangre ? TipoSangre { get; set; }
-    public TipoPersona ? TipoPersona { get; set; }
+    //public TipoPersona ? TipoPersona { get; set; }
     public Eps ? Eps { get; set; }
     public Arl ? Arl { get; set; }
 

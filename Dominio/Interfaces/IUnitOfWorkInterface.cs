@@ -23,9 +23,11 @@ public interface IUnitOfWorkInterface
     ISalonInterface Salones { get; }
     ITipoEmailInterface TipoEmails { get; }
     ITipoNivelIncidenciaInterface TipoNivelIncidencias { get; }
-    ITipoPersonaInterface TipoPersonas { get; }
+    IRolInterface Roles { get; }
     ITipoSangreInterface TiposSangre { get; }
     ITipoTelefonoMovilInterface TipoTelefonoMoviles { get; }
+    IUsuarioInterface Usuarios { get; }
+    IUsuariosRolesInterface UsuariosRoles { get; }
 
     Task<int> SaveAsync();
 

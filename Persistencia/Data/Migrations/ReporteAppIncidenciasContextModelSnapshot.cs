@@ -271,7 +271,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("Id_equipoFK")
                         .HasColumnType("varchar(20)");
 
-                    b.Property<int>("Id_recursoHwSwPcFK")
+                    b.Property<int?>("Id_recursoHwSwPcFK")
                         .HasColumnType("int");
 
                     b.HasKey("Id_equipoFK", "Id_recursoHwSwPcFK");
@@ -424,7 +424,8 @@ namespace Persistencia.Data.Migrations
                     b.Property<int>("Estrato_social")
                         .HasColumnType("int(2)");
 
-                    b.Property<int>("Id_arlFK")
+                    b.Property<int?>("Id_arlFK")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int>("Id_ciudadFK")
@@ -434,9 +435,6 @@ namespace Persistencia.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Id_generoFK")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id_tipoPersonaFK")
                         .HasColumnType("int");
 
                     b.Property<int>("Id_tipoSangreFK")
@@ -464,8 +462,6 @@ namespace Persistencia.Data.Migrations
                     b.HasIndex("Id_epsFK");
 
                     b.HasIndex("Id_generoFK");
-
-                    b.HasIndex("Id_tipoPersonaFK");
 
                     b.HasIndex("Id_tipoSangreFK");
 
@@ -500,7 +496,7 @@ namespace Persistencia.Data.Migrations
                     b.Property<string>("Id_personaFK")
                         .HasColumnType("varchar(20)");
 
-                    b.Property<int>("Id_tipoTelefonoMovilFK")
+                    b.Property<int?>("Id_tipoTelefonoMovilFK")
                         .HasColumnType("int");
 
                     b.Property<string>("Numero_telefonoMovil")
@@ -593,6 +589,29 @@ namespace Persistencia.Data.Migrations
                     b.ToTable("RecursoHwSwPcs", (string)null);
                 });
 
+            modelBuilder.Entity("Dominio.Entities.Rol", b =>
+                {
+                    b.Property<int>("Id_codigo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.HasKey("Id_codigo");
+
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
+                    b.ToTable("Rol", (string)null);
+                });
+
             modelBuilder.Entity("Dominio.Entities.Salon", b =>
                 {
                     b.Property<string>("Id_codigo")
@@ -665,29 +684,6 @@ namespace Persistencia.Data.Migrations
                     b.ToTable("TipoNivelIncidencias", (string)null);
                 });
 
-            modelBuilder.Entity("Dominio.Entities.TipoPersona", b =>
-                {
-                    b.Property<int>("Id_codigo")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Descripcion")
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<string>("Nombre_tipoPersona")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
-
-                    b.HasKey("Id_codigo");
-
-                    b.HasIndex("Nombre_tipoPersona")
-                        .IsUnique();
-
-                    b.ToTable("TipoPersonas", (string)null);
-                });
-
             modelBuilder.Entity("Dominio.Entities.TipoSangre", b =>
                 {
                     b.Property<int>("Id_codigo")
@@ -725,6 +721,51 @@ namespace Persistencia.Data.Migrations
                     b.HasKey("Id_codigo");
 
                     b.ToTable("TipoTelefonoMoviles", (string)null);
+                });
+
+            modelBuilder.Entity("Dominio.Entities.Usuario", b =>
+                {
+                    b.Property<int>("Id_codigo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
+
+                    b.HasKey("Id_codigo");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("Username")
+                        .IsUnique();
+
+                    b.ToTable("Usuarios", (string)null);
+                });
+
+            modelBuilder.Entity("Dominio.Entities.UsuariosRoles", b =>
+                {
+                    b.Property<int?>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("RolId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UsuarioId", "RolId");
+
+                    b.HasIndex("RolId");
+
+                    b.ToTable("UsuariosRoles");
                 });
 
             modelBuilder.Entity("Dominio.Entities.Ciudad", b =>
@@ -867,12 +908,6 @@ namespace Persistencia.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Dominio.Entities.TipoPersona", "TipoPersona")
-                        .WithMany("Personas")
-                        .HasForeignKey("Id_tipoPersonaFK")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Dominio.Entities.TipoSangre", "TipoSangre")
                         .WithMany("Personas")
                         .HasForeignKey("Id_tipoSangreFK")
@@ -886,8 +921,6 @@ namespace Persistencia.Data.Migrations
                     b.Navigation("Eps");
 
                     b.Navigation("Genero");
-
-                    b.Navigation("TipoPersona");
 
                     b.Navigation("TipoSangre");
                 });
@@ -971,6 +1004,25 @@ namespace Persistencia.Data.Migrations
                     b.Navigation("AreaIncidencia");
                 });
 
+            modelBuilder.Entity("Dominio.Entities.UsuariosRoles", b =>
+                {
+                    b.HasOne("Dominio.Entities.Rol", "Rol")
+                        .WithMany("UsuariosRoles")
+                        .HasForeignKey("RolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Dominio.Entities.Usuario", "Usuario")
+                        .WithMany("UsuariosRoles")
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Rol");
+
+                    b.Navigation("Usuario");
+                });
+
             modelBuilder.Entity("Dominio.Entities.AreaIncidencia", b =>
                 {
                     b.Navigation("Incidencias");
@@ -1048,6 +1100,11 @@ namespace Persistencia.Data.Migrations
                     b.Navigation("EquipoPcRecursoHwSwPcs");
                 });
 
+            modelBuilder.Entity("Dominio.Entities.Rol", b =>
+                {
+                    b.Navigation("UsuariosRoles");
+                });
+
             modelBuilder.Entity("Dominio.Entities.Salon", b =>
                 {
                     b.Navigation("Incidencias");
@@ -1065,11 +1122,6 @@ namespace Persistencia.Data.Migrations
                     b.Navigation("Incidencias");
                 });
 
-            modelBuilder.Entity("Dominio.Entities.TipoPersona", b =>
-                {
-                    b.Navigation("Personas");
-                });
-
             modelBuilder.Entity("Dominio.Entities.TipoSangre", b =>
                 {
                     b.Navigation("Personas");
@@ -1078,6 +1130,11 @@ namespace Persistencia.Data.Migrations
             modelBuilder.Entity("Dominio.Entities.TipoTelefonoMovil", b =>
                 {
                     b.Navigation("PersonaTelefonoMoviles");
+                });
+
+            modelBuilder.Entity("Dominio.Entities.Usuario", b =>
+                {
+                    b.Navigation("UsuariosRoles");
                 });
 #pragma warning restore 612, 618
         }
