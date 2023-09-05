@@ -28,33 +28,48 @@ C:/Users/Usuario/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/ref
 /home/apolM01-062/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/refint/Persistencia.dll
 /home/apolM01-062/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.pdb
 /home/apolM01-062/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/ref/Persistencia.dll
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.deps.json
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.dll
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.pdb
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Dominio.dll
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Dominio.pdb
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.AssemblyReference.cache
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfoInputs.cache
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfo.cs
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CopyComplete
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.dll
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\refint\Persistencia.dll
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.pdb
-C:\Users\Usuario\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\ref\Persistencia.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.deps.json
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.pdb
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Dominio.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Dominio.pdb
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.AssemblyReference.cache
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfoInputs.cache
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfo.cs
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CoreCompileInputs.cache
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CopyComplete
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\refint\Persistencia.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.pdb
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\ref\Persistencia.dll
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Persistencia.deps.json
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Persistencia.dll
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Persistencia.pdb
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Dominio.dll
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Dominio.pdb
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.csproj.AssemblyReference.cache
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.AssemblyInfoInputs.cache
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.AssemblyInfo.cs
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.csproj.CoreCompileInputs.cache
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.csproj.CopyComplete
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.dll
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/refint/Persistencia.dll
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.pdb
+C:/Users/APM01-62/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/ref/Persistencia.dll
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Persistencia.deps.json
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Persistencia.dll
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Persistencia.pdb
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Dominio.dll
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/bin/Debug/net7.0/Dominio.pdb
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.csproj.AssemblyReference.cache
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.AssemblyInfoInputs.cache
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.AssemblyInfo.cs
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.csproj.CoreCompileInputs.cache
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.csproj.CopyComplete
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.dll
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/refint/Persistencia.dll
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/Persistencia.pdb
+/home/skylab-110/Desktop/reporteAppIncidencias/Persistencia/obj/Debug/net7.0/ref/Persistencia.dll
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.deps.json
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.dll
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Persistencia.pdb
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Dominio.dll
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\bin\Debug\net7.0\Dominio.pdb
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.AssemblyReference.cache
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfoInputs.cache
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfo.cs
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CopyComplete
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.dll
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\refint\Persistencia.dll
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\Persistencia.pdb
+C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Persistencia\obj\Debug\net7.0\ref\Persistencia.dll

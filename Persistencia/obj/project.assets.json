@@ -5248,19 +5248,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\APM01-62\\.nuget\\packages\\": {}
+    "C:\\Users\\Erik Mejia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
       "projectName": "Persistencia",
-      "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
-      "packagesPath": "C:\\Users\\APM01-62\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Persistencia\\obj\\",
+      "projectPath": "C:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Persistencia\\Persistencia.csproj",
+      "packagesPath": "C:\\Users\\Erik Mejia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\APM01-62\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Erik Mejia\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5272,8 +5272,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\APM01-62\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
+            "C:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj"
             }
           }
         }

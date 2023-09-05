@@ -3,6 +3,7 @@ using API.Helpers;
 using AutoMapper;
 using Dominio.Entities;
 using Dominio.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -22,6 +23,7 @@ public class PaisController : BaseApiController
 
     //METODO GET (obtener todos los registros de Paises de la Db)
     [HttpGet]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -35,6 +37,7 @@ public class PaisController : BaseApiController
     //METODO GET (obtener solo los Paises con sus Dep de la Db)
     [HttpGet]
     [MapToApiVersion("1.1")]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -47,6 +50,7 @@ public class PaisController : BaseApiController
     //METODO GET (obtener solo los paises y Dep con paginacion y registros y busquedas de la Db)
     [HttpGet]
     [MapToApiVersion("1.2")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -61,6 +65,7 @@ public class PaisController : BaseApiController
 
     //METODO GET POR ID (Traer un solo registro de la entidad Paises con su Dep de la  Db)
     [HttpGet("{id}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -78,6 +83,7 @@ public class PaisController : BaseApiController
 
     //METODO POST (para enviar ragistros a la entidad Paises de la Db)
     [HttpPost]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -97,6 +103,7 @@ public class PaisController : BaseApiController
 
     //METODO PUT (editar un registro de la entidad Pais de la Db)
     [HttpPut("{id}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -117,6 +124,7 @@ public class PaisController : BaseApiController
 
     //METODO DELETE (Eliminar un registro de la entidad Pais de la Db)
     [HttpDelete("{id}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

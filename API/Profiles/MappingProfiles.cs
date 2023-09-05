@@ -74,5 +74,7 @@ public class MappingProfiles : Profile
 
         CreateMap<TipoTelefonoMovil, TipoTelefonoMovilDto>().ReverseMap();
         CreateMap<TipoTelefonoMovil, TipoTeleMoviXpersonaTeleMoviDto>().ReverseMap();
+
+        CreateMap<UsuariosRoles, UsuariosRolesDto>().ReverseMap();
     }
 }

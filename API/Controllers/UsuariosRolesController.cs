@@ -7,20 +7,19 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[ApiVersion("1.0")] //obtener las Arl 
-[ApiVersion("1.1")] //obtener Arl con sus usuarios
-[ApiVersion("1.2")] //obtener paginacion, registros y buscador en Arl
-public class ArlController : BaseApiController
+[ApiVersion("1.0")] //obtener la relacion entre Usuario y rol
+[ApiVersion("1.1")] // por definir
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador de usuariosRoles
+public class UsuariosRolesController : BaseApiController
 {
     private readonly IUnitOfWorkInterface _UnitOfWork;
-    private readonly IMapper mapper;
+    private readonly Mapper mapper;
 
-    public ArlController(IUnitOfWorkInterface UnitOfWork, IMapper mapper)
+    public UsuariosRolesController(IUnitOfWorkInterface UnitOfWork, Mapper mapper)
     {
         _UnitOfWork = UnitOfWork;
         this.mapper = mapper;
     }
-    //peticiones 
 
     //METODO GET (obtener todos los registros)
     [HttpGet]
@@ -29,24 +28,10 @@ public class ArlController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<List<ArlDto>>> Get()
+    public async Task<ActionResult<List<UsuariosRolesDto>>> Get()
     {
-        var arls = await _UnitOfWork.Arl.GetAllAsync();
-        return this.mapper.Map<List<ArlDto>>(arls);
-    }
-
-    //METODO GET (obtener todas las Arl con sus Usuarios)
-    [HttpGet]
-    [Authorize]
-    [MapToApiVersion("1.1")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<List<ArlPorPersonaDto>>> Get1A()
-    {
-        var arlPersonas = await _UnitOfWork.Arl.GetAllAsync();
-        return this.mapper.Map<List<ArlPorPersonaDto>>(arlPersonas);
+        var usuariosRoles = await _UnitOfWork.UsuariosRoles.GetAllAsync();
+        return this.mapper.Map<List<UsuariosRolesDto>>(usuariosRoles);
     }
 
     //METODO GET (Para obtener paginacion, registro y busqueda en la entidad)
@@ -57,30 +42,31 @@ public class ArlController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<Pager<ArlPorPersonaDto>>> Get1B([FromQuery] Params arlParams)
+    public async Task<ActionResult<Pager<UsuariosRolesDto>>> Get1B([FromQuery] Params usuarioParams)
     {
-        var arlPersonas = await _UnitOfWork.Arl.GetAllAsync(arlParams.PageIndex, arlParams.PageSize, arlParams.Search);
-        var lstArlPersonas = this.mapper.Map<List<ArlPorPersonaDto>>(arlPersonas.registros);
+        var usuariosRoles = await _UnitOfWork.UsuariosRoles.GetAllAsync(usuarioParams.PageIndex, usuarioParams.PageSize, usuarioParams.Search);
 
-        return new Pager<ArlPorPersonaDto>(lstArlPersonas, arlPersonas.totalRegistros, arlParams.PageIndex, arlParams.PageSize, arlParams.Search);
+        var lstUsuRolDto = this.mapper.Map<List<UsuariosRolesDto>>(usuariosRoles.registros);
+
+        return new Pager<UsuariosRolesDto>(lstUsuRolDto, usuariosRoles.totalRegistros, usuarioParams.PageIndex, usuarioParams.PageSize, usuarioParams.Search);
     }
 
     //METODO GET POR ID (Traer un solo registro de la entidad de la  Db)
-    [HttpGet("{id}")]
+    [HttpGet("{idUsua}/{idRol}")]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<ArlPorPersonaDto>> Get( int id)
+    public async Task<ActionResult<UsuariosRolesDto>> Get( int idUsua, int idRol)
     {
-        var arlPersona = await _UnitOfWork.Arl.GetByIdAsync(id);
+        var usuarioRol = await _UnitOfWork.UsuariosRoles.GetByIdAsync(idUsua, idRol);
 
-        if (arlPersona == null) {
+        if (usuarioRol == null) {
             return NotFound();
         }
 
-        return this.mapper.Map<ArlPorPersonaDto>(arlPersona);
+        return this.mapper.Map<UsuariosRolesDto>(usuarioRol);
     }
 
     //METODO POST (para enviar registros a la entidad de la Db)
@@ -90,59 +76,60 @@ public class ArlController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<ArlDto>> Post(ArlDto arlDto)
+    public async Task<ActionResult<UsuariosRolesDto>> Post(UsuariosRolesDto usuariosRolesDto)
     {
-        var arl = this.mapper.Map<Arl>(arlDto);
-        _UnitOfWork.Arl.Add(arl);
+        var usuarioRol = this.mapper.Map<UsuariosRoles>(usuariosRolesDto);
+        _UnitOfWork.UsuariosRoles.Add(usuarioRol);
         await _UnitOfWork.SaveAsync();
 
-        if (arl == null) {
+        if (usuarioRol == null) {
             return BadRequest();
         }
 
-        return this.mapper.Map<ArlDto>(arl);
+        return this.mapper.Map<UsuariosRolesDto>(usuarioRol);
     }
 
     //METODO PUT (editar un registro de la entidad de la Db)
-    [HttpPut("{id}")]
+    [HttpPut("{idUsua}/{idRol}")]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<ArlDto>> Put(int id, [FromBody] ArlDto arlDto)
+    public async Task<ActionResult<UsuariosRolesDto>> Put(int idUsua, int idRol, [FromBody] UsuariosRolesDto usuariosRolesDto)
     {
-        if (arlDto == null) {
+        if (usuariosRolesDto == null) {
             return NotFound();
         }
 
-        var arl = this.mapper.Map<Arl>(arlDto);
-        arl.Id_codigo = id;
-        _UnitOfWork.Arl.Update(arl);
+        var usuarioRol = this.mapper.Map<UsuariosRoles>(usuariosRolesDto);
+        usuarioRol.UsuarioId = idUsua;
+        usuarioRol.RolId = idRol;
+        _UnitOfWork.UsuariosRoles.Update(usuarioRol);
         await _UnitOfWork.SaveAsync();
-        return this.mapper.Map<ArlDto>(arl);        
+
+        return this.mapper.Map<UsuariosRolesDto>(usuarioRol);        
     }
 
     //METODO DELETE (Eliminar un registro de la entidad de la Db)
-    [HttpDelete("{id}")]
+    [HttpDelete("{idUsua}/{idRol}")]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<ArlDto>> Delete(int id)
+    public async Task<ActionResult<UsuariosRolesDto>> Delete(int idUsua, int idRol)
     {
-        var arl = await _UnitOfWork.Arl.GetByIdAsync(id);
+        var usuarioRol = await _UnitOfWork.UsuariosRoles.GetByIdAsync (idUsua, idRol);
         
-        if (arl == null) {
+        if (usuarioRol == null) {
             return NotFound();
         }
 
-        _UnitOfWork.Arl.Remove(arl);
+        _UnitOfWork.UsuariosRoles.Remove(usuarioRol);
         await _UnitOfWork.SaveAsync();
 
         return NoContent();
     }
-
 
 }

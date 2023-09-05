@@ -19,6 +19,7 @@ public class PaisRepository : GenericRepositoryA<Pais>, IPaisInterface
     {
         return await _context.Set<Pais>()
         .Include(p => p.Departamentos)
+        .ThenInclude(p => p.Ciudades)
         .ToListAsync();
     }
 
@@ -26,6 +27,7 @@ public class PaisRepository : GenericRepositoryA<Pais>, IPaisInterface
     {
         return await _context.Set<Pais>()
         .Include(p => p.Departamentos)
+        .ThenInclude(p => p.Ciudades)
         .FirstOrDefaultAsync(p => p.Id_codigo == id);
     }
     
@@ -40,6 +42,7 @@ public class PaisRepository : GenericRepositoryA<Pais>, IPaisInterface
         var totalRegistros = await query.CountAsync();
         var registros = await query
                                 .Include(p => p.Departamentos)
+                                .ThenInclude(p => p.Ciudades)
                                 .Skip((pageIndex - 1) * pageSize)
                                 .Take(pageSize)
                                 .ToListAsync();

@@ -6,7 +6,7 @@ public class RolXusuarioXUusuariosRolesDto
     public string ? Descripcion { get; set; }
 
     //List<>
-    //public List<Usuario> ? Usuarios { get; set; }
-    //public List<UsuariosRoles> ? UsuariosRoles { get; set; }
+    public List<RegisterDto> ? Usuarios { get; set; }
+    public List<UsuariosRolesDto> ? UsuariosRoles { get; set; }
         
 }
