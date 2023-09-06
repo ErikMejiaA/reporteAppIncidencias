@@ -36,7 +36,8 @@ public class PersonaController : BaseApiController
     }
 
     //METODO GET (obtener todas la inf de las persona)
-    [HttpGet]
+    //[HttpGet]
+    [HttpGet("Todo")]
     [Authorize]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -50,7 +51,8 @@ public class PersonaController : BaseApiController
     }
 
     //METODO GET (Para obtener paginacion, registro y busqueda en la entidad)
-    [HttpGet]
+    //[HttpGet]
+    [HttpGet("Pag")]
     [Authorize]
     [MapToApiVersion("1.2")]
     [ProducesResponseType(StatusCodes.Status200OK)]

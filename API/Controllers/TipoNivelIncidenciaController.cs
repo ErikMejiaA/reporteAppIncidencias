@@ -37,7 +37,8 @@ public class TipoNivelIncidenciaController : BaseApiController
     }
 
     //METODO GET (obtener todas las list)
-    [HttpGet]
+    //[HttpGet]
+    [HttpGet("Todo")]
     [Authorize]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -51,7 +52,8 @@ public class TipoNivelIncidenciaController : BaseApiController
     }
 
     //METODO GET (Para obtener paginacion, registro y busqueda en la entidad)
-    [HttpGet]
+    //[HttpGet]
+    [HttpGet("Pag")]
     [Authorize]
     [MapToApiVersion("1.2")]
     [ProducesResponseType(StatusCodes.Status200OK)]

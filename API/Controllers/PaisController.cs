@@ -35,7 +35,8 @@ public class PaisController : BaseApiController
     }
 
     //METODO GET (obtener solo los Paises con sus Dep de la Db)
-    [HttpGet]
+    //[HttpGet]
+    [HttpGet("Todo")]
     [MapToApiVersion("1.1")]
     [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -48,7 +49,8 @@ public class PaisController : BaseApiController
     }
 
     //METODO GET (obtener solo los paises y Dep con paginacion y registros y busquedas de la Db)
-    [HttpGet]
+    //[HttpGet]
+    [HttpGet("Pag")]
     [MapToApiVersion("1.2")]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]

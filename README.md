@@ -29,7 +29,8 @@ El sistema debe permitir asignar Computadores, Teclados, Mouse, Diademas de soni
 
 El sistema debe permitir crear Trainner (id, nombre, Email personal, Email Corporativo, Teléfono Móvil, Teléfono Residencia, Teléfono Empresa, Teléfono Móvil Empresarial). 
 
-guia base para el registro de un Usuario
+guia base para el registro de un Usuario:
+
 {
   "email": "tomas@gmail.com",
   "username": "Tomas",

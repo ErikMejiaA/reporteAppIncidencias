@@ -173,6 +173,19 @@ public class UserService : IUserServiceInterface
         return JwtSecurityToken;
     }
 
+    //Editar el usuario registrado
+    public async Task<Usuario> EditarUsuarioAsync(Usuario model)
+    {
+        Usuario usuario = new Usuario();
+        usuario.Id_codigo = model.Id_codigo;
+        usuario.Username = model.Username;
+        usuario.Email = model.Email;
+        usuario.Password = _passwordHasher.HashPassword(usuario, model.Password);
+        _unitOfWork.Usuarios.Update(usuario);
+        await _unitOfWork.SaveAsync();
+        return usuario;
+    }
+
     /*public async Task<LoginDto>  UserLogin(LoginDto model)
     {
         var usuario = await _unitOfWork.Usuarios.GetByUsernameAsync(model.Username);
@@ -184,5 +197,8 @@ public class UserService : IUserServiceInterface
         }
         return null;
     }*/
+
+
+
 
 }

@@ -58,3 +58,15 @@ C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\Domin
 C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\refint\Dominio.dll
 C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\Dominio.pdb
 C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\ref\Dominio.dll
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\bin\Debug\net7.0\Dominio.deps.json
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\bin\Debug\net7.0\Dominio.dll
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\bin\Debug\net7.0\Dominio.pdb
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\Dominio.csproj.AssemblyReference.cache
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\Dominio.AssemblyInfo.cs
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\Dominio.dll
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\refint\Dominio.dll
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\Dominio.pdb
+C:\Users\APM01-62\Desktop\reporteAppIncidencias\Dominio\obj\Debug\net7.0\ref\Dominio.dll

@@ -5050,11 +5050,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
-      "projectPath": "c:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
+      "projectPath": "C:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Dominio\\Dominio.csproj",
       "packagesPath": "C:\\Users\\Erik Mejia\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Dominio\\obj\\",
+      "outputPath": "C:\\Users\\Erik Mejia\\Desktop\\reporteAppIncidencias\\Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Erik Mejia\\AppData\\Roaming\\NuGet\\NuGet.Config"

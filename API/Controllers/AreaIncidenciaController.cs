@@ -36,7 +36,8 @@ public class AreaIncidenciaController : BaseApiController
     }
 
     //METODO GET (obtener todos los registos de incidencias y salones en las areas)
-    [HttpGet]
+    //[HttpGet]
+    [HttpGet("Todo")]
     [Authorize]
     [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -50,7 +51,8 @@ public class AreaIncidenciaController : BaseApiController
     }
 
     //METODO GET (Para obtener paginacion, registro y busqueda en la entidad)
-    [HttpGet]
+    //[HttpGet]
+    [HttpGet("Pag")]
     [Authorize]
     [MapToApiVersion("1.2")]
     [ProducesResponseType(StatusCodes.Status200OK)]

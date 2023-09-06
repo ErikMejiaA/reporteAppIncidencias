@@ -35,7 +35,8 @@ public class UsuariosRolesController : BaseApiController
     }
 
     //METODO GET (Para obtener paginacion, registro y busqueda en la entidad)
-    [HttpGet]
+    //[HttpGet]
+    [HttpGet("Pag")]
     [Authorize]
     [MapToApiVersion("1.2")]
     [ProducesResponseType(StatusCodes.Status200OK)]
