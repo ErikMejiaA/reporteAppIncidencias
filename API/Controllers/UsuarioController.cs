@@ -1,4 +1,5 @@
 using API.Dtos;
+using API.Helpers;
 using API.Services;
 using AutoMapper;
 using Dominio.Entities;
@@ -7,6 +8,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
+[ApiVersion("1.0")] //obtener los usuarios registrados
+[ApiVersion("1.1")] //obtener los usuarios y los roles 
+[ApiVersion("1.2")] //obtener paginacion, registros y buscador nulo
 public class UsuarioController : BaseApiController
 {
     private readonly IUserServiceInterface _userService;
@@ -57,8 +61,9 @@ public class UsuarioController : BaseApiController
     }
 
     //METODO GET (OBTENER LOS USUARIOS REGISTRADOS)
-    [HttpGet("verUsuarios")]
-    //[Authorize(Roles = "Administrador")]
+    [HttpGet]
+    [Authorize(Roles = "Administrador")]
+    [MapToApiVersion("1.0")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -71,20 +76,58 @@ public class UsuarioController : BaseApiController
 
     //METODO GET (OBTENER LOS USUARIOS CON SU ROL)
     [HttpGet("verUsuariosXroles")]
-    //[Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Administrador")]
+    [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<List<UsuarioXrolDto>>> GetUR()
+    public async Task<ActionResult<List<UsuarioXrolDto>>> Get1A()
     {
         var usuariosRoles = await _UnitOfWork.Usuarios.GetAllAsync();
         return this.mapper.Map<List<UsuarioXrolDto>>(usuariosRoles);
     }
 
+    //METODO GET POR ID (TRAER UN UNICO REGISTRO CON SUS ROLES)
+    [HttpGet("{id}")]
+    [Authorize(Roles = "Administrador")]
+    [MapToApiVersion("1.1")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<UsuarioXrolDto>> Get(int id)
+    {
+        var usuarioXrol = await _UnitOfWork.Usuarios.GetByIdAsync(id);
+
+        if (usuarioXrol == null) {
+            return NotFound();
+        }
+
+        return this.mapper.Map<UsuarioXrolDto>(usuarioXrol);
+    }
+
+    //METODO GET (Para obtener paginacion, registro y busqueda en la entidad)
+    //[HttpGet]
+    [HttpGet("Pag")]
+    [Authorize(Roles = "Administrador")]
+    [MapToApiVersion("1.2")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<Pager<UsuarioXrolDto>>> Get1B([FromQuery] Params usuarioParams)
+    {
+        var usuariosXroles = await _UnitOfWork.Usuarios.GetAllAsync(usuarioParams.PageIndex, usuarioParams.PageSize, usuarioParams.Search);
+        var lstUsuarioXrolDto = this.mapper.Map<List<UsuarioXrolDto>>(usuariosXroles.registros);
+
+        return new Pager<UsuarioXrolDto>(lstUsuarioXrolDto, usuariosXroles.totalRegistros, usuarioParams.PageIndex, usuarioParams.PageSize, usuarioParams.Search);
+    }
+
+
     //METODO PUT (EDITAR UN USUARIO)
     [HttpPut("{id}")]
-    //[Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -103,7 +146,7 @@ public class UsuarioController : BaseApiController
 
     //METODO DELETE (BORRAR USUARIO REGISTRADO)
     [HttpDelete("{id}")]
-    //[Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

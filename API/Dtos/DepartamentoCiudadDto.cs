@@ -8,6 +8,6 @@ public class DepartamentoCiudadDto
     //public int Id_paisFK { get; set; }
 
     //List<>
-    public List<CiudadDto> ? Ciudades { get; set; }
+    public List<CiudadPersonaDto> ? Ciudades { get; set; }
         
 }

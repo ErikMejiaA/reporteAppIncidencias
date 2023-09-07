@@ -38,7 +38,7 @@ public class PaisController : BaseApiController
     //[HttpGet]
     [HttpGet("Todo")]
     [MapToApiVersion("1.1")]
-    [Authorize(Roles = "Administrador")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -68,6 +68,7 @@ public class PaisController : BaseApiController
     //METODO GET POR ID (Traer un solo registro de la entidad Paises con su Dep de la  Db)
     [HttpGet("{id}")]
     [Authorize]
+    [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -85,7 +86,7 @@ public class PaisController : BaseApiController
 
     //METODO POST (para enviar ragistros a la entidad Paises de la Db)
     [HttpPost]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -105,7 +106,7 @@ public class PaisController : BaseApiController
 
     //METODO PUT (editar un registro de la entidad Pais de la Db)
     [HttpPut("{id}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -126,7 +127,7 @@ public class PaisController : BaseApiController
 
     //METODO DELETE (Eliminar un registro de la entidad Pais de la Db)
     [HttpDelete("{id}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

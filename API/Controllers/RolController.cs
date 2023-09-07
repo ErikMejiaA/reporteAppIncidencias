@@ -59,23 +59,24 @@ public class RolController : BaseApiController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<Pager<RolDto>>> Get1B([FromQuery] Params rolParams)
+    public async Task<ActionResult<Pager<RolXusuarioXUusuariosRolesDto>>> Get1B([FromQuery] Params rolParams)
     {
         var roles = await _UnitOfWork.Roles.GetAllAsync(rolParams.PageIndex, rolParams.PageSize, rolParams.Search);
 
-        var lstTipoPersonaDto = this.mapper.Map<List<RolDto>>(roles.registros);
+        var lstTipoPersonaDto = this.mapper.Map<List<RolXusuarioXUusuariosRolesDto>>(roles.registros);
 
-        return new Pager<RolDto>(lstTipoPersonaDto, roles.totalRegistros, rolParams.PageIndex, rolParams.PageSize, rolParams.Search);
+        return new Pager<RolXusuarioXUusuariosRolesDto>(lstTipoPersonaDto, roles.totalRegistros, rolParams.PageIndex, rolParams.PageSize, rolParams.Search);
     }
 
     //METODO GET POR ID (Traer un solo registro de la entidad de la  Db)
     [HttpGet("{id}")]
     [Authorize]
+    [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<RolDto>> Get( int id)
+    public async Task<ActionResult<RolXusuarioXUusuariosRolesDto>> Get( int id)
     {
         var rol = await _UnitOfWork.Roles.GetByIdAsync(id);
 
@@ -83,12 +84,12 @@ public class RolController : BaseApiController
             return NotFound();
         }
 
-        return this.mapper.Map<RolDto>(rol);
+        return this.mapper.Map<RolXusuarioXUusuariosRolesDto>(rol);
     }
 
     //METODO POST (para enviar registros a la entidad de la Db)
     [HttpPost]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -108,7 +109,7 @@ public class RolController : BaseApiController
 
     //METODO PUT (editar un registro de la entidad de la Db)
     [HttpPut("{id}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -129,7 +130,7 @@ public class RolController : BaseApiController
 
     //METODO DELETE (Eliminar un registro de la entidad de la Db)
     [HttpDelete("{id}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

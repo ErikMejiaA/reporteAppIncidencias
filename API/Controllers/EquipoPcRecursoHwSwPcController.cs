@@ -55,7 +55,7 @@ public class EquipoPcRecursoHwSwPcController : BaseApiController
 
     //METODO POST (para enviar registros a la entidad de la Db)
     [HttpPost]
-    [Authorize]
+    [Authorize(Roles = "Administrador, Trainer")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -75,7 +75,7 @@ public class EquipoPcRecursoHwSwPcController : BaseApiController
 
     //METODO PUT (editar un registro de la entidad de la Db)
     [HttpPut("{idEquiPc}/{idRecurso}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador, Trainer")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -97,7 +97,7 @@ public class EquipoPcRecursoHwSwPcController : BaseApiController
 
     //METODO DELETE (Eliminar un registro de la entidad de la Db)
     [HttpDelete("{id}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador, Trainer")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

@@ -22,7 +22,7 @@ public class PersonaTelefonoMovilController : BaseApiController
     }
 
     //peticiones 
-     //METODO GET (obtener todos los registros)
+    //METODO GET (obtener todos los registros)
     [HttpGet]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -73,7 +73,7 @@ public class PersonaTelefonoMovilController : BaseApiController
 
     //METODO POST (para enviar registros a la entidad de la Db)
     [HttpPost]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -93,7 +93,7 @@ public class PersonaTelefonoMovilController : BaseApiController
 
     //METODO PUT (editar un registro de la entidad de la Db)
     [HttpPut("{idPerson}/{idTipoTelMov}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -115,7 +115,7 @@ public class PersonaTelefonoMovilController : BaseApiController
 
     //METODO DELETE (Eliminar un registro de la entidad de la Db)
     [HttpDelete("{idPerson}/{idTipoTelMov}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

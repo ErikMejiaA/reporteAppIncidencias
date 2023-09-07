@@ -55,6 +55,7 @@ public class EstadoIncidenciaController : BaseApiController
     //METODO GET POR ID (Traer un solo registro de la entidad de la  Db)
     [HttpGet("{id}")]
     [Authorize]
+    [MapToApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -72,7 +73,7 @@ public class EstadoIncidenciaController : BaseApiController
 
     //METODO POST (para enviar registros a la entidad de la Db)
     [HttpPost]
-    [Authorize]
+    [Authorize(Roles = "Administrador, Trainer")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -92,7 +93,7 @@ public class EstadoIncidenciaController : BaseApiController
 
     //METODO PUT (editar un registro de la entidad de la Db)
     [HttpPut("{id}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador, Trainer")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -113,7 +114,7 @@ public class EstadoIncidenciaController : BaseApiController
 
     //METODO DELETE (Eliminar un registro de la entidad de la Db)
     [HttpDelete("{id}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador, Trainer")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

@@ -72,7 +72,7 @@ public class UsuariosRolesController : BaseApiController
 
     //METODO POST (para enviar registros a la entidad de la Db)
     [HttpPost]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -92,7 +92,7 @@ public class UsuariosRolesController : BaseApiController
 
     //METODO PUT (editar un registro de la entidad de la Db)
     [HttpPut("{idUsua}/{idRol}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -114,7 +114,7 @@ public class UsuariosRolesController : BaseApiController
 
     //METODO DELETE (Eliminar un registro de la entidad de la Db)
     [HttpDelete("{idUsua}/{idRol}")]
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

@@ -37,4 +37,6 @@ guia base para el registro de un Usuario:
   "password": "123456"
 }
 
+Se realizo la creacion de entidades para la representacion de las tablas de la base de datos, sus respectivas configuraciones en donde sie le asignaban las propiedades de los atributos para cada entidad, se creo las interfaces y los repositrios, Dtos, Controladores y la unidad de trabajo (interfaz y repositorio). ademas se creo el archivo para el versionado de los Endpoint, tambien se realizo la paginacion a los registros que se crean en cada interfaz, de igual forma se creo un nuero maximo de peticiones o solicitud a realizar a los Enbpoint. adicionalmente se el JWT (Json web token) que permite enviar informacion segura de una aplicaciona otra, para este caso se implemento para poder tener la autorizacion de quien puede realizar o enviar una solicitud a una determinada url, asi como tambien asignar a un determinado rol una autorizacion por medio de un token. 
+
 

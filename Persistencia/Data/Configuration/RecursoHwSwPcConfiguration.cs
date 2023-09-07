@@ -24,7 +24,6 @@ public class RecursoHwSwPcConfiguration : IEntityTypeConfiguration<RecursoHwSwPc
         .HasMaxLength(30);
 
         builder.Property(p => p.Version)
-        .IsRequired()
         .HasMaxLength(50);
 
         builder.Property(p => p.Descripcion)

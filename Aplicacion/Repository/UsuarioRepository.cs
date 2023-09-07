@@ -26,4 +26,30 @@ public class UsuarioRepository : GenericRepositoryA<Usuario>, IUsuarioInterface
         .Include(p => p.Roles)
         .ToListAsync();
     }
+
+    public override async Task<Usuario> GetByIdAsync(int id)
+    {
+        return await _context.Set<Usuario>()
+        .Include(p => p.Roles)
+        .FirstOrDefaultAsync(p => p.Id_codigo == id);
+    }
+
+    public override async Task<(int totalRegistros, IEnumerable<Usuario> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    {
+        var query = _context.Usuarios as IQueryable<Usuario>;
+
+        if (!string.IsNullOrEmpty(search)) 
+        {
+            query = query.Where(p => p.Username.ToLower().Contains(search));
+        }
+
+        var totalRegistros = await query.CountAsync();
+        var registros = await query
+                                .Include(p => p.Roles)
+                                .Skip((pageIndex - 1) * pageSize)
+                                .Take(pageSize)
+                                .ToListAsync();
+
+        return (totalRegistros, registros);
+    }
 }

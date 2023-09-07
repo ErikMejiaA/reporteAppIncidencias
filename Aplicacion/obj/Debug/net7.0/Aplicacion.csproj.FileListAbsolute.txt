@@ -66,6 +66,23 @@ C:/Users/APM01-62/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/ref/
 /home/skylab-110/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/refint/Aplicacion.dll
 /home/skylab-110/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/Aplicacion.pdb
 /home/skylab-110/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/ref/Aplicacion.dll
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/bin/Debug/net7.0/Aplicacion.deps.json
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/bin/Debug/net7.0/Aplicacion.dll
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/bin/Debug/net7.0/Aplicacion.pdb
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/bin/Debug/net7.0/Dominio.dll
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/bin/Debug/net7.0/Persistencia.dll
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/bin/Debug/net7.0/Dominio.pdb
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/bin/Debug/net7.0/Persistencia.pdb
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/Aplicacion.csproj.AssemblyReference.cache
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/Aplicacion.AssemblyInfoInputs.cache
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/Aplicacion.AssemblyInfo.cs
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/Aplicacion.csproj.CoreCompileInputs.cache
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/Aplicacion.csproj.CopyComplete
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/Aplicacion.dll
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/refint/Aplicacion.dll
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/Aplicacion.pdb
+C:/Users/Erik Mejia/Desktop/reporteAppIncidencias/Aplicacion/obj/Debug/net7.0/ref/Aplicacion.dll
 C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Aplicacion.deps.json
 C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Aplicacion.dll
 C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Aplicacion.pdb
@@ -83,20 +100,3 @@ C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Ap
 C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\refint\Aplicacion.dll
 C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Aplicacion.pdb
 C:\Users\Erik Mejia\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\ref\Aplicacion.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Aplicacion.deps.json
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Aplicacion.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Aplicacion.pdb
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Dominio.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Persistencia.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Dominio.pdb
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\bin\Debug\net7.0\Persistencia.pdb
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Aplicacion.csproj.AssemblyReference.cache
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Aplicacion.AssemblyInfoInputs.cache
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Aplicacion.AssemblyInfo.cs
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Aplicacion.csproj.CoreCompileInputs.cache
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Aplicacion.csproj.CopyComplete
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Aplicacion.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\refint\Aplicacion.dll
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\Aplicacion.pdb
-C:\Users\APM01-62\Desktop\reporteAppIncidencias\Aplicacion\obj\Debug\net7.0\ref\Aplicacion.dll
